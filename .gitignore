@@ -1,22 +1,22 @@
 
-macOS
+# macOS
 
 .DS_Store
 
-Maven
+# Maven
 
 target/
 
-Java
+# Java
 
 .class
 
-Eclipse
+# Eclipse
 
 .metadata/
 bin/
 
-IntelliJ
+# IntelliJ
 
 .idea/
 *.iml

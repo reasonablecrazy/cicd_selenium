@@ -2,6 +2,9 @@ package naveennarayananacademy.tests;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -87,7 +90,9 @@ public class StandAloneTest extends BaseTests {
 		checkoutPage.selectCountry(data.get("country")).submitCheckoutPage();
 		
 		ConfirmationPage confPage = new ConfirmationPage(getDriver());
-		confPage.validateProductOnFinalPage(data.get("prodname"));	
+		confPage.validateProductOnFinalPage(data.get("prodname"));
+		
+		System.out.println("Successfully concluded the test");
 	}
 
 }
