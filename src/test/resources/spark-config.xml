@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <theme>STANDARD</theme> <!-- DARK is also possible -->
+        <encoding>UTF-8</encoding>
+        <protocol>HTTPS</protocol>
+        <timeline-enabled>true</timeline-enabled>
+        <chart-location>top</chart-location>
+        <offline-mode>true</offline-mode>
+        <enable-analytics>false</enable-analytics>
+    </configuration>
+</extentreports>

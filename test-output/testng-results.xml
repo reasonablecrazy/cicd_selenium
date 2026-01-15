@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-01-12T19:42:16 MST" name="Default suite" finished-at="2026-01-12T19:42:33 MST" duration-ms="16822">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberTests.TestNG_TestRunner@6200f9cb]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2026-01-12T19:42:16 MST" name="Default test" finished-at="2026-01-12T19:42:33 MST" duration-ms="16822">
+      <class name="cucumberTests.TestNG_TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberTests.TestNG_TestRunner@6200f9cb]" started-at="2026-01-12T19:42:17 MST" name="setUpClass" finished-at="2026-01-12T19:42:17 MST" duration-ms="292" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@b791a81]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberTests.TestNG_TestRunner@6200f9cb]" started-at="2026-01-12T19:42:17 MST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-12T19:42:24 MST" duration-ms="6961" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Incorrect Loginr"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Error Validations"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.fail(Assert.java:116)
+at naveennarayananacademy.stepdefinitions.StepDefinitionImplementations.incorrect_login_error_message_is_displayed(StepDefinitionImplementations.java:60)
+at ✽.incorrect login error message is displayed(file:///Users/naveennarayanan99/eclipse-workspace/SeleniumMavenProject/src/test/java/cucumberTests/ErrorValidation.feature:9)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberTests.TestNG_TestRunner@6200f9cb]" started-at="2026-01-12T19:42:24 MST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-12T19:42:33 MST" duration-ms="9519" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Positive test of order"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Test E2E order from the website"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberTests.TestNG_TestRunner@6200f9cb]" started-at="2026-01-12T19:42:33 MST" name="tearDownClass" finished-at="2026-01-12T19:42:33 MST" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- cucumberTests.TestNG_TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
