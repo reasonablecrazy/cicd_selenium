@@ -21,9 +21,9 @@ public class StepDefinitionImplementations extends BaseTests {
 	public CheckOutPage checkoutPage;
 	public ConfirmationPage confPage;
 	
-	@Given("I land on eCommerce page")
-	public void I_land_on_eCommerce_page() throws IOException {
-		initializeDriver();
+	@Given("I land on eCommerce page on {string} browser")
+	public void I_land_on_eCommerce_page(String browserName) throws IOException {
+		initializeDriver(browserName);
 		lp = new LandingPage(getDriver());
 		lp.loadThePage();
 	}

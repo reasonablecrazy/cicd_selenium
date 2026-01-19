@@ -119,7 +119,7 @@
             <configuration>
                 <!-- Optional: Specify the testng.xml file to run a specific test suite -->
                 <suiteXmlFiles>
-                    <suiteXmlFile>testng2.xml</suiteXmlFile>
+                    <suiteXmlFile>parallel_cross_browser.xml</suiteXmlFile>
                 </suiteXmlFiles>
             </configuration>
         </plugin>

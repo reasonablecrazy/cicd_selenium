@@ -21,7 +21,7 @@ import naveennarayananacademy.testComponents.RetryAnalyzer;
 
 public class StandAloneTest extends BaseTests {
 	
-	@Test (groups= "E2E")
+	@Test (groups= "E2E", retryAnalyzer = RetryAnalyzer.class)
 	public void submitTest() {
 		
 		LandingPage lp = new LandingPage(getDriver());
@@ -39,14 +39,14 @@ public class StandAloneTest extends BaseTests {
 		confPage.validateTheThankYouMessage();		
 	}
 	
-	@Test (groups= "ErrorMsg")
+	@Test (groups= "ErrorMsg", retryAnalyzer = RetryAnalyzer.class)
 	public void incorrectLogin() {
 		LandingPage lp = new LandingPage(getDriver());
 		lp.login("twinklekhanna@gmail.com", "Test12345");
 		lp.validateLoginErrorMessage();
 	}
 	
-	@Test(groups="E2E", dataProvider = "getData")
+	@Test(groups="E2E", dataProvider = "getData", retryAnalyzer = RetryAnalyzer.class)
 	public void validateProductOnConfirmationPage(String username, String password, String pname,String countryName) {
 		LandingPage lp = new LandingPage(getDriver());
 		lp.login(username, password);
@@ -77,7 +77,7 @@ public class StandAloneTest extends BaseTests {
 		};
 	}
 	
-	@Test(groups="E2E", dataProvider = "loginData")
+	@Test(groups="E2E", dataProvider = "loginData", retryAnalyzer = RetryAnalyzer.class)
 	public void validateProductOnConfirmationPage_with_JSON(HashMap <String,String> data) {
 		LandingPage lp = new LandingPage(getDriver());
 		lp.login(data.get("username"), data.get("password"));

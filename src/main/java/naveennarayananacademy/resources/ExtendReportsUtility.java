@@ -12,7 +12,7 @@ public class ExtendReportsUtility {
 		
 	public static ExtentReports generateExtentReport() {
         Date now = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyymmdd_hhmmss");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
         String timestamp = formatter.format(now);
 		
 		ExtentSparkReporter reporter = new ExtentSparkReporter(System.getProperty("user.dir")+

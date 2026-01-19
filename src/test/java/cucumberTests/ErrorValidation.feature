@@ -1,7 +1,7 @@
 Feature: Error Validations
 
 Background:
-	Given I land on eCommerce page
+	Given I land on eCommerce page on "chrome" browser
 
 @ErrorValidation
 Scenario Outline: Incorrect Loginr

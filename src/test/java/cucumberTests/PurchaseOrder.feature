@@ -1,7 +1,7 @@
 Feature: Test E2E order from the website
 
 Background:
-	Given I land on eCommerce page
+	Given I land on eCommerce page on "chrome" browser
 
 @Regression_Cucumber
 Scenario Outline: Positive test of order
