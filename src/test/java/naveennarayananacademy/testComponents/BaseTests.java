@@ -50,6 +50,7 @@ public class BaseTests {
 		String fullDir = defaultDir+path;
 		FileInputStream file = new FileInputStream(fullDir);
 		
+		
 		Properties prop = new Properties();
 		prop.load(file);
 		String browserName = (System.getProperty("browser")!=null) ? 
