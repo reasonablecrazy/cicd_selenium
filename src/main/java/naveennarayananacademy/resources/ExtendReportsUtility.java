@@ -1,5 +1,6 @@
 package naveennarayananacademy.resources;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -16,7 +17,7 @@ public class ExtendReportsUtility {
         String timestamp = formatter.format(now);
 		
 		ExtentSparkReporter reporter = new ExtentSparkReporter(System.getProperty("user.dir")+
-				"//Reports//AutomationReport-"+timestamp+".html");
+				File.separator+"Reports"+File.separator+"AutomationReport"+File.separator+timestamp+".html");
 		reporter.config().setReportName("Automation Results");
 		reporter.config().setDocumentTitle("Test Results");
 		ExtentReports extent = new ExtentReports();

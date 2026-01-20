@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 
@@ -70,8 +72,9 @@ public class StandAloneTest extends BaseTests {
 	
 	@DataProvider(name = "loginData",parallel = false)
 	public Object[][] getDataForLogin() throws IOException {
-		List<HashMap<String,String>> ls = extractDataFromJSON(System.
-				getProperty("user.dir")+"//src//test//java//naveennarayananacademy//testComponents//TestData.JSON");
+		Path path = Paths.get(System.
+				getProperty("user.dir"), "src","test","java","naveennarayananacademy","testComponents","TestData.JSON");
+		List<HashMap<String,String>> ls = extractDataFromJSON(path);
 		return new Object[][] {
 			{ls.get(0)}
 		};

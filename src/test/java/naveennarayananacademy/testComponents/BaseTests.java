@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
@@ -45,9 +46,8 @@ public class BaseTests {
 	public static WebDriver initializeDriver(String browserNameFromTest) throws IOException{
 		
 
-		String defaultDir = System.getProperty("user.dir");
-		String path = "//src//main//java//naveennarayananacademy//resources//GlobalData.properties";
-		String fullDir = defaultDir+path;
+		String fullDir = System.getProperty("user.dir")+File.separator+"src"+File.separator+"main"+File.separator+"java"+File.separator
+				+"naveennarayananacademy"+File.separator+"resources"+File.separator+"GlobalData.properties";
 		FileInputStream file = new FileInputStream(fullDir);
 		
 		
@@ -128,9 +128,9 @@ public class BaseTests {
 		driver.remove();
 	}
 	
-	public List<HashMap<String,String>> extractDataFromJSON(String filepath) throws IOException {
+	public List<HashMap<String,String>> extractDataFromJSON(Path path) throws IOException {
 		
-		String jsonContent = Files.readString(new File(filepath).toPath());
+		String jsonContent = Files.readString(path);
 		ObjectMapper mapper = new ObjectMapper();
 		List<HashMap<String,String>> ls = mapper.readValue(jsonContent, new TypeReference <List<HashMap<String,String>>>(){});
 		
@@ -140,9 +140,9 @@ public class BaseTests {
 	
 	public String getScreenshot(String methodName) throws IOException {
 		File f = ((TakesScreenshot)driver.get()).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(f, new File(System.getProperty("user.dir")+"//Reports//"+
+		FileUtils.copyFile(f, new File(System.getProperty("user.dir")+File.separator+"Reports"+File.separator+
 				methodName+".JPEG"));
-		String filePath = System.getProperty("user.dir")+"//Reports//"+
+		String filePath = System.getProperty("user.dir")+File.separator+"Reports"+
 				methodName+".JPEG";
 		return filePath;
 	}
