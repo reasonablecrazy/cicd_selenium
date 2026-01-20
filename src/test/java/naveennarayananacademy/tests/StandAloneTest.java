@@ -76,7 +76,7 @@ public class StandAloneTest extends BaseTests {
 				getProperty("user.dir"), "src","test","java","naveennarayananacademy","testComponents","TestData.JSON");
 		List<HashMap<String,String>> ls = extractDataFromJSON(path);
 		return new Object[][] {
-			{ls.get(0)}
+			{ls.get(0),ls.get(1)}
 		};
 	}
 	
