@@ -46,19 +46,18 @@ public class BaseTests {
         return driver.get();
     }
     static Properties prop;
-    static ChromeOptions options;
 	
 	public static WebDriver initializeDriver(String browserNameFromTest) throws IOException{
 		
 		
 		loadThePropertiesFile();
-		setChromeOptions();
+		ChromeOptions options = getChromeOptions();
 		String browserName = getBrowserDetails(browserNameFromTest);
 		String osName = getOSDetails();
 		String modeOfExecution = getModeOfExecution();
 		
 		if(modeOfExecution.equalsIgnoreCase("local")) {
-			selectLocalDriver(browserName,osName);
+			selectLocalDriver(browserName,osName,options);
 		}
 		else {
 			selectRemoteDriver(browserName,osName);
@@ -109,7 +108,7 @@ public class BaseTests {
 	                throw new RuntimeException("Unsupported browser: " + browserName);
 	        }
 
-	        driver.set(new RemoteWebDriver(gridUrl, options));
+	        driver.set(new RemoteWebDriver(gridUrl, options2));
 	        return getDriver();
 
 	    } catch (Exception e) {
@@ -118,7 +117,7 @@ public class BaseTests {
 		
 	}
 
-	private static void selectLocalDriver(String browserName, String osName) {
+	private static void selectLocalDriver(String browserName, String osName, ChromeOptions options) {
 		// TODO Auto-generated method stub
 		if(browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
@@ -138,7 +137,7 @@ public class BaseTests {
 		}
 		else {
 			WebDriverManager.chromedriver().setup();
-			driver.set(new ChromeDriver());
+			driver.set(new ChromeDriver(options));
 		}
 		
 	}
@@ -171,16 +170,16 @@ public class BaseTests {
 		return browserName;
 	}
 
-	private static void setChromeOptions() {
-		// TODO Auto-generated method stub
-		String chromeMode = prop.getProperty("chrome-mode","not-headless");
-		options= new ChromeOptions();
-		if(chromeMode.equalsIgnoreCase("headless")){
-			options.addArguments("--headless=new");
-			options.addArguments("--disable-gpu");
-			options.addArguments("--window-size=1920,1080");
-		}
-		
+	private static ChromeOptions getChromeOptions() {
+	    ChromeOptions options = new ChromeOptions();
+	    String chromeMode = prop.getProperty("chrome-mode", "not-headless");
+
+	    if (chromeMode.equalsIgnoreCase("headless")) {
+	        options.addArguments("--headless=new");
+	        options.addArguments("--disable-gpu");
+	        options.addArguments("--window-size=1920,1080");
+	    }
+	    return options;
 	}
 
 	private static void loadThePropertiesFile() throws IOException {

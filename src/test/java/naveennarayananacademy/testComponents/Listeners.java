@@ -1,11 +1,8 @@
 package naveennarayananacademy.testComponents;
 
-import java.io.File;
 import java.io.IOException;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -15,88 +12,60 @@ import com.aventstack.extentreports.ExtentTest;
 
 import naveennarayananacademy.resources.ExtendReportsUtility;
 
-public class Listeners extends BaseTests implements ITestListener {
-	
-	ExtentReports extentReport = ExtendReportsUtility.generateExtentReport();
-	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
-	ExtentTest test;
-	
-	void setExtentTest(ExtentTest test) {
-		extentTest.set(test);
-	}
-	ExtentTest getExtentTest() {
-		return extentTest.get();
-	}
-	
-	@Override
-	public void onTestStart(ITestResult result) {
-		test = extentReport.createTest(result.getMethod().getMethodName());
-		setExtentTest(test);
-		getExtentTest().assignCategory("Regression");
-		getExtentTest().assignAuthor("Naveen");
-	}
+public class Listeners implements ITestListener {
 
-	@Override
-	public void onTestSuccess(ITestResult result) {
-		getExtentTest().pass("The test has passed: "+result.getMethod().getMethodName());
-	}
+    private static ExtentReports extentReport =
+            ExtendReportsUtility.generateExtentReport();
 
-	@Override
-	public void onTestSkipped(ITestResult result) {
-		getExtentTest().skip("The test is skipped: "+result.getMethod().getMethodName());
-	}
+    private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
 
-	@Override
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+    public static ExtentTest getExtentTest() {
+        return extentTest.get();
+    }
 
-	}
+    @Override
+    public void onTestStart(ITestResult result) {
+        ExtentTest test = extentReport.createTest(result.getMethod().getMethodName());
+        extentTest.set(test);
 
-	@Override
-	public void onTestFailedWithTimeout(ITestResult result) {
-		Object[]parameters = result.getParameters();
-		String parameter = parameters[0].toString();
-		System.out.println("The test with parameters: "+parameter+" has failed.");
-		getExtentTest().fail("The test has failed: "+result.getMethod().getMethodName()+
-				result.getThrowable());
-		String testName = result.getMethod().getMethodName();
-		String filePath = null;
-		try {
-			filePath = getScreenshot(testName);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}	
-		getExtentTest().addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());
-	}
+        test.assignCategory("Regression");
+        test.assignAuthor("Naveen");
+    }
 
-	@Override
-	public void onStart(ITestContext context) {
-		// TODO Auto-generated method stub
-		ITestListener.super.onStart(context);
-	}
+    @Override
+    public void onTestSuccess(ITestResult result) {
+        getExtentTest().pass("Test passed");
+    }
 
-	@Override
-	public void onFinish(ITestContext context) {
-		// TODO Auto-generated method stub
-		extentReport.flush();
-	}
+    @Override
+    public void onTestFailure(ITestResult result) {
 
-	@Override
-	public void onTestFailure(ITestResult result) {
-		Object[]parameters = result.getParameters();
-		String parameter = parameters[0].toString();
-		System.out.println("The test with parameters: "+parameter+" has failed.");
-		getExtentTest().fail("The test : "+result.getMethod().getMethodName()+" ran with "
-				+ "parameters: "+parameter+" has failed");
-		getExtentTest().fail(result.getThrowable());
-		String testName = result.getMethod().getMethodName();
-		String filePath = null;
-		try {
-			filePath = getScreenshot(testName);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}	
-		getExtentTest().addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());
-	}
+        ExtentTest test = getExtentTest();
+        if (test == null) {
+            return; // safety guard
+        }
 
+        test.fail(result.getThrowable());
+
+        try {
+            WebDriver driver = BaseTests.getDriver();
+            if (driver != null) {
+                BaseTests base = new BaseTests();
+                String path = base.getScreenshot(result.getMethod().getMethodName());
+                test.addScreenCaptureFromPath(path);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onTestSkipped(ITestResult result) {
+        getExtentTest().skip("Test skipped");
+    }
+
+    @Override
+    public void onFinish(ITestContext context) {
+        extentReport.flush();
+    }
 }

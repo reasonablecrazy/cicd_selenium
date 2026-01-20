@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Confirmation Page</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/0/2</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jan 18 19:53:39 MST 2026</td>
+<td>Started on:</td><td>Mon Jan 19 20:58:07 MST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>77 seconds (77259 ms)</td>
+<tr><td>Total time:</td><td>45 seconds (45134 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,32 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='naveennarayananacademy.tests.StandAloneTest.validateProductOnConfirmationPage_with_JSON()'><b>validateProductOnConfirmationPage_with_JSON</b><br>Test class: naveennarayananacademy.tests.StandAloneTest<br>Parameters: {country=Canada, password=Test1234, prodname=ADIDAS ORIGINAL, username=twinklekhanna@gmail.com}</td>
+<td></td>
+<td>4</td>
+<td>naveennarayananacademy.tests.StandAloneTest@52e7a6b2</td></tr>
+<tr>
+<td title='naveennarayananacademy.tests.StandAloneTest.incorrectLogin()'><b>incorrectLogin</b><br>Test class: naveennarayananacademy.tests.StandAloneTest</td>
+<td></td>
+<td>0</td>
+<td>naveennarayananacademy.tests.StandAloneTest@52e7a6b2</td></tr>
+<tr>
+<td title='naveennarayananacademy.tests.StandAloneTest.validateProductOnConfirmationPage()'><b>validateProductOnConfirmationPage</b><br>Test class: naveennarayananacademy.tests.StandAloneTest<br>Parameters: twinklekhanna@gmail.com, Test1234, ADIDAS ORIGINAL, Canada</td>
+<td></td>
+<td>4</td>
+<td>naveennarayananacademy.tests.StandAloneTest@52e7a6b2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -77,20 +101,25 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='naveennarayananacademy.tests.StandAloneTest.validateProductOnConfirmationPage()'><b>validateProductOnConfirmationPage</b><br>Test class: naveennarayananacademy.tests.StandAloneTest<br>Parameters: twinklekhanna@gmail.com, Test1234, ADIDAS ORIGINAL, Canada</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //h1[contains(text(),&apos;Thankyou&apos;)]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@class=&apos;cartSection&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at abstractComponents.Abstract_Components.waitForElement(Abstract_Components.java:26)
-	at naveennarayananacademy.pageobjectmodel.ConfirmationPage.validateProductOnFinalPage(ConfirmationPage.java:38)
-	at naveennarayananacademy.tests.StandAloneTest.validateProductOnConfirmationPage(StandAloneTest.java:62)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.openqa.selenium.NoSuchElementException: For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+	at naveennarayananacademy.pageobjectmodel.ProductCartPage.navigateToCart(ProductCartPage.java:66)
+	at naveennarayananacademy.tests.StandAloneTest.validateProductOnConfirmationPage(StandAloneTest.java:57)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@class=&apos;cartSection&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.1&apos;, java.version: &apos;21.0.9&apos;
-Driver info: org.openqa.selenium.safari.SafariDriver
-Command: [C8B2698D-536F-4976-AF33-E4FC10D4422B, findElement {using=xpath, value=//h1[contains(text(),&apos;Thankyou&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 26.1, platformName: mac, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:experimentalWebSocketUrl: false, safari:platformBuildVersion: 25B78, safari:platformVersion: 26.1, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}, webkit:alwaysAllowAutoplay: false}
-Session ID: C8B2698D-536F-4976-AF33-E4FC10D4422B
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [c46c4823-cace-4dbc-b2ce-97e2d619b161, findElement {value=//div[@class=&apos;cartSection&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.1, moz:accessibilityChecks: false, moz:buildID: 20260116091309, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 25.1.0, moz:processID: 24851, moz:profile: /var/folders/bh/0xdzph6512b..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Session ID: c46c4823-cace-4dbc-b2ce-97e2d619b161
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -109,14 +138,14 @@ Session ID: C8B2698D-536F-4976-AF33-E4FC10D4422B
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 29 more
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1402400433", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1402400433'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //h1[contains(text(),&apos;Thankyou&apos;)]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	... 19 more
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2134749352", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2134749352'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@class=&apos;cartSection&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at abstractComponents.Abstract_Components.waitForElement(Abstract_Components.java:26)
-	at naveennarayananacademy.pageobjectmodel.ConfirmationPage.validateProductOnFinalPage(ConfirmationPage.java:38)
-	at naveennarayananacademy.tests.StandAloneTest.validateProductOnConfirmationPage(StandAloneTest.java:62)
+	at naveennarayananacademy.pageobjectmodel.ProductCartPage.navigateToCart(ProductCartPage.java:66)
+	at naveennarayananacademy.tests.StandAloneTest.validateProductOnConfirmationPage(StandAloneTest.java:57)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -127,29 +156,20 @@ Session ID: C8B2698D-536F-4976-AF33-E4FC10D4422B
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@class=&apos;cartSection&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.1&apos;, java.version: &apos;21.0.9&apos;
-Driver info: org.openqa.selenium.safari.SafariDriver
-Command: [C8B2698D-536F-4976-AF33-E4FC10D4422B, findElement {using=xpath, value=//h1[contains(text(),&apos;Thankyou&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 26.1, platformName: mac, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:experimentalWebSocketUrl: false, safari:platformBuildVersion: 25B78, safari:platformVersion: 26.1, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}, webkit:alwaysAllowAutoplay: false}
-Session ID: C8B2698D-536F-4976-AF33-E4FC10D4422B
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [c46c4823-cace-4dbc-b2ce-97e2d619b161, findElement {value=//div[@class=&apos;cartSection&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.1, moz:accessibilityChecks: false, moz:buildID: 20260116091309, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 25.1.0, moz:processID: 24851, moz:profile: /var/folders/bh/0xdzph6512b..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Session ID: c46c4823-cace-4dbc-b2ce-97e2d619b161
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -171,24 +191,106 @@ Session ID: C8B2698D-536F-4976-AF33-E4FC10D4422B
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 29 more
+	... 19 more
 </pre></div></td>
-<td>38</td>
-<td>naveennarayananacademy.tests.StandAloneTest@4bf48f6</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<td>22</td>
+<td>naveennarayananacademy.tests.StandAloneTest@52e7a6b2</td></tr>
 <tr>
-<td title='naveennarayananacademy.tests.StandAloneTest.validateProductOnConfirmationPage()'><b>validateProductOnConfirmationPage</b><br>Test class: naveennarayananacademy.tests.StandAloneTest<br>Parameters: dimplekapadia@gmail.com, Test12345, ADIDAS ORIGINAL, Canada</td>
-<td></td>
-<td>4</td>
-<td>naveennarayananacademy.tests.StandAloneTest@4bf48f6</td></tr>
+<td title='naveennarayananacademy.tests.StandAloneTest.validateProductOnConfirmationPage_with_JSON()'><b>validateProductOnConfirmationPage_with_JSON</b><br>Test class: naveennarayananacademy.tests.StandAloneTest<br>Parameters: {country=Canada, password=Test1234, prodname=ADIDAS ORIGINAL, username=twinklekhanna@gmail.com}</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: span[class=&apos;ng-star-inserted&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at abstractComponents.Abstract_Components.waitForElement(Abstract_Components.java:26)
+	at naveennarayananacademy.pageobjectmodel.CheckOutPage.selectCountry(CheckOutPage.java:51)
+	at naveennarayananacademy.tests.StandAloneTest.validateProductOnConfirmationPage_with_JSON(StandAloneTest.java:95)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: span[class=&apos;ng-star-inserted&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.1&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a812087b-4e2a-44a9-8902-393bd8e2ad32, findElement {value=span[class=&apos;ng-star-inserted&apos;], using=css selector}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.1, moz:accessibilityChecks: false, moz:buildID: 20260116091309, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 25.1.0, moz:processID: 24850, moz:profile: /var/folders/bh/0xdzph6512b..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Session ID: a812087b-4e2a-44a9-8902-393bd8e2ad32
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 19 more
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace508560102", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace508560102'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: span[class=&apos;ng-star-inserted&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at abstractComponents.Abstract_Components.waitForElement(Abstract_Components.java:26)
+	at naveennarayananacademy.pageobjectmodel.CheckOutPage.selectCountry(CheckOutPage.java:51)
+	at naveennarayananacademy.tests.StandAloneTest.validateProductOnConfirmationPage_with_JSON(StandAloneTest.java:95)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: span[class=&apos;ng-star-inserted&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.1&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a812087b-4e2a-44a9-8902-393bd8e2ad32, findElement {value=span[class=&apos;ng-star-inserted&apos;], using=css selector}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.1, moz:accessibilityChecks: false, moz:buildID: 20260116091309, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 25.1.0, moz:processID: 24850, moz:profile: /var/folders/bh/0xdzph6512b..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Session ID: a812087b-4e2a-44a9-8902-393bd8e2ad32
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 19 more
+</pre></div></td>
+<td>23</td>
+<td>naveennarayananacademy.tests.StandAloneTest@52e7a6b2</td></tr>
 </table><p>
 </body>
 </html>

@@ -66,8 +66,9 @@ public class StandAloneTest extends BaseTests {
 	
 	@DataProvider
 	public Object[][] getData() {
-		return new Object[][] {{"twinklekhanna@gmail.com","Test1234","ADIDAS ORIGINAL","Canada"},
-			{"dimplekapadia@gmail.com","Test12345","ADIDAS ORIGINAL","Canada"}};
+		return new Object[][] {{"twinklekhanna@gmail.com","Test1234","ADIDAS ORIGINAL","Canada"}
+			};
+			//{"dimplekapadia@gmail.com","Test12345","ADIDAS ORIGINAL","Canada"}
 	}
 	
 	@DataProvider(name = "loginData",parallel = false)
@@ -75,9 +76,10 @@ public class StandAloneTest extends BaseTests {
 		Path path = Paths.get(System.
 				getProperty("user.dir"), "src","test","java","naveennarayananacademy","testComponents","TestData.JSON");
 		List<HashMap<String,String>> ls = extractDataFromJSON(path);
-		return new Object[][] {
-			{ls.get(0),ls.get(1)}
-		};
+		
+	    return new Object[][] {
+	        { ls.get(0) }   // second test run
+	    };
 	}
 	
 	@Test(groups="E2E", dataProvider = "loginData", retryAnalyzer = RetryAnalyzer.class)

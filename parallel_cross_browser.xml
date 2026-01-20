@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="tests" thread-count="4">
+<suite name="Suite" parallel="methods" thread-count="3">
 <listeners>
 <listener class-name="naveennarayananacademy.testComponents.Listeners"></listener>
 <!--<listener class-name="naveennarayananacademy.testComponents.RetryTransformer"></listener>
@@ -11,26 +11,30 @@
       <class name="naveennarayananacademy.tests.StandAloneTest">
       <methods>
       	<include name="validateProductOnConfirmationPage_with_JSON"></include>
+      	<include name="incorrectLogin"></include>
+		<include name="validateProductOnConfirmationPage"></include>
       </methods></class>
     </classes>
   </test> <!-- Test -->
   
   <test thread-count="5" name="Error Validation">
-  <parameter name="browser" value="firefox"></parameter>
+  <parameter name="browser" value="safari"></parameter>
     <classes>
       <class name="naveennarayananacademy.tests.StandAloneTest">
       <methods>
-      	<include name="incorrectLogin"></include>
+      	<include name="validateProductOnConfirmationPage_with_JSON"></include>
       </methods></class>
     </classes>
   </test> <!-- Test -->
   
   <test thread-count="5" name="Confirmation Page">
-  <parameter name="browser" value="safari"></parameter>
+  <parameter name="browser" value="firefox"></parameter>
     <classes>
       <class name="naveennarayananacademy.tests.StandAloneTest">
-      <methods>
-      	<include name="validateProductOnConfirmationPage"></include>
+     <methods>
+      	<include name="validateProductOnConfirmationPage_with_JSON"></include>
+      	<include name="incorrectLogin"></include>
+		<include name="validateProductOnConfirmationPage"></include>
       </methods></class>
     </classes>
   </test> <!-- Test -->
@@ -41,6 +45,8 @@
       <class name="naveennarayananacademy.tests.StandAloneTest">
       <methods>
       	<include name="validateProductOnConfirmationPage_with_JSON"></include>
+      	<include name="incorrectLogin"></include>
+		<include name="validateProductOnConfirmationPage"></include>
       </methods></class>
     </classes>
   </test> <!-- Test -->

@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="9" total="13" passed="3" failed="1" skipped="0">
+<testng-results retried="2" ignored="6" total="18" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-18T19:53:20 MST" name="Suite" finished-at="2026-01-18T19:54:57 MST" duration-ms="96876">
+  <suite started-at="2026-01-19T20:57:36 MST" name="Suite" finished-at="2026-01-19T20:59:03 MST" duration-ms="87020">
     <groups>
       <group name="ErrorMsg">
-        <method signature="StandAloneTest.incorrectLogin()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@12299890]" name="incorrectLogin" class="naveennarayananacademy.tests.StandAloneTest"/>
+        <method signature="StandAloneTest.incorrectLogin()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@928763c]" name="incorrectLogin" class="naveennarayananacademy.tests.StandAloneTest"/>
+        <method signature="StandAloneTest.incorrectLogin()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" name="incorrectLogin" class="naveennarayananacademy.tests.StandAloneTest"/>
+        <method signature="StandAloneTest.incorrectLogin()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@42a15bdc]" name="incorrectLogin" class="naveennarayananacademy.tests.StandAloneTest"/>
       </group> <!-- ErrorMsg -->
       <group name="E2E">
-        <method signature="StandAloneTest.validateProductOnConfirmationPage_with_JSON(java.util.HashMap)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@51bf5add]" name="validateProductOnConfirmationPage_with_JSON" class="naveennarayananacademy.tests.StandAloneTest"/>
-        <method signature="StandAloneTest.validateProductOnConfirmationPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@4bf48f6]" name="validateProductOnConfirmationPage" class="naveennarayananacademy.tests.StandAloneTest"/>
+        <method signature="StandAloneTest.validateProductOnConfirmationPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@928763c]" name="validateProductOnConfirmationPage" class="naveennarayananacademy.tests.StandAloneTest"/>
+        <method signature="StandAloneTest.validateProductOnConfirmationPage_with_JSON(java.util.HashMap)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@928763c]" name="validateProductOnConfirmationPage_with_JSON" class="naveennarayananacademy.tests.StandAloneTest"/>
+        <method signature="StandAloneTest.validateProductOnConfirmationPage_with_JSON(java.util.HashMap)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@6b58b9e9]" name="validateProductOnConfirmationPage_with_JSON" class="naveennarayananacademy.tests.StandAloneTest"/>
+        <method signature="StandAloneTest.validateProductOnConfirmationPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" name="validateProductOnConfirmationPage" class="naveennarayananacademy.tests.StandAloneTest"/>
+        <method signature="StandAloneTest.validateProductOnConfirmationPage_with_JSON(java.util.HashMap)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" name="validateProductOnConfirmationPage_with_JSON" class="naveennarayananacademy.tests.StandAloneTest"/>
+        <method signature="StandAloneTest.validateProductOnConfirmationPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@42a15bdc]" name="validateProductOnConfirmationPage" class="naveennarayananacademy.tests.StandAloneTest"/>
+        <method signature="StandAloneTest.validateProductOnConfirmationPage_with_JSON(java.util.HashMap)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@42a15bdc]" name="validateProductOnConfirmationPage_with_JSON" class="naveennarayananacademy.tests.StandAloneTest"/>
       </group> <!-- E2E -->
     </groups>
-    <test started-at="2026-01-18T19:53:20 MST" name="E2E" finished-at="2026-01-18T19:53:30 MST" duration-ms="10310">
+    <test started-at="2026-01-19T20:57:36 MST" name="E2E" finished-at="2026-01-19T20:57:47 MST" duration-ms="11225">
       <class name="naveennarayananacademy.tests.StandAloneTest">
-        <test-method is-config="true" signature="launchApplication(java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@51bf5add]" started-at="2026-01-18T19:53:20 MST" name="launchApplication" finished-at="2026-01-18T19:53:25 MST" duration-ms="5374" status="PASS">
+        <test-method is-config="true" signature="launchApplication(java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@928763c]" started-at="2026-01-19T20:57:36 MST" name="launchApplication" finished-at="2026-01-19T20:57:42 MST" duration-ms="6081" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -25,7 +32,59 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="validateProductOnConfirmationPage_with_JSON(java.util.HashMap)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@51bf5add]" started-at="2026-01-18T19:53:25 MST" name="validateProductOnConfirmationPage_with_JSON" data-provider="loginData" finished-at="2026-01-18T19:53:30 MST" duration-ms="4742" status="PASS">
+        <test-method is-config="true" signature="launchApplication(java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@928763c]" started-at="2026-01-19T20:57:36 MST" name="launchApplication" finished-at="2026-01-19T20:57:39 MST" duration-ms="3538" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method is-config="true" signature="launchApplication(java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@928763c]" started-at="2026-01-19T20:57:36 MST" name="launchApplication" finished-at="2026-01-19T20:57:42 MST" duration-ms="5984" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="validateProductOnConfirmationPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@928763c]" started-at="2026-01-19T20:57:39 MST" name="validateProductOnConfirmationPage" data-provider="getData" finished-at="2026-01-19T20:57:47 MST" duration-ms="7437" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[twinklekhanna@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ADIDAS ORIGINAL]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Canada]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProductOnConfirmationPage -->
+        <test-method signature="incorrectLogin()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@928763c]" started-at="2026-01-19T20:57:42 MST" name="incorrectLogin" finished-at="2026-01-19T20:57:43 MST" duration-ms="850" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- incorrectLogin -->
+        <test-method signature="validateProductOnConfirmationPage_with_JSON(java.util.HashMap)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@928763c]" started-at="2026-01-19T20:57:42 MST" name="validateProductOnConfirmationPage_with_JSON" data-provider="loginData" finished-at="2026-01-19T20:57:47 MST" duration-ms="5028" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -36,38 +95,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateProductOnConfirmationPage_with_JSON -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@51bf5add]" started-at="2026-01-18T19:53:30 MST" name="quitDriver" finished-at="2026-01-18T19:53:30 MST" duration-ms="97" status="PASS">
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@928763c]" started-at="2026-01-19T20:57:43 MST" name="quitDriver" finished-at="2026-01-19T20:57:43 MST" duration-ms="100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@928763c]" started-at="2026-01-19T20:57:47 MST" name="quitDriver" finished-at="2026-01-19T20:57:47 MST" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@928763c]" started-at="2026-01-19T20:57:47 MST" name="quitDriver" finished-at="2026-01-19T20:57:47 MST" duration-ms="95" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
       </class> <!-- naveennarayananacademy.tests.StandAloneTest -->
     </test> <!-- E2E -->
-    <test started-at="2026-01-18T19:53:30 MST" name="Error Validation" finished-at="2026-01-18T19:53:39 MST" duration-ms="9157">
+    <test started-at="2026-01-19T20:57:47 MST" name="Error Validation" finished-at="2026-01-19T20:58:07 MST" duration-ms="20385">
       <class name="naveennarayananacademy.tests.StandAloneTest">
-        <test-method is-config="true" signature="launchApplication(java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@12299890]" started-at="2026-01-18T19:53:30 MST" name="launchApplication" finished-at="2026-01-18T19:53:38 MST" duration-ms="7998" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="incorrectLogin()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@12299890]" started-at="2026-01-18T19:53:38 MST" name="incorrectLogin" finished-at="2026-01-18T19:53:39 MST" duration-ms="702" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- incorrectLogin -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@12299890]" started-at="2026-01-18T19:53:39 MST" name="quitDriver" finished-at="2026-01-18T19:53:39 MST" duration-ms="453" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitDriver -->
-      </class> <!-- naveennarayananacademy.tests.StandAloneTest -->
-    </test> <!-- Error Validation -->
-    <test started-at="2026-01-18T19:53:39 MST" name="Confirmation Page" finished-at="2026-01-18T19:54:57 MST" duration-ms="77259">
-      <class name="naveennarayananacademy.tests.StandAloneTest">
-        <test-method is-config="true" signature="launchApplication(java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@4bf48f6]" started-at="2026-01-18T19:53:39 MST" name="launchApplication" finished-at="2026-01-18T19:53:45 MST" duration-ms="5392" status="PASS">
+        <test-method is-config="true" signature="launchApplication(java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@6b58b9e9]" started-at="2026-01-19T20:57:47 MST" name="launchApplication" finished-at="2026-01-19T20:57:52 MST" duration-ms="5172" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -78,7 +122,59 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="validateProductOnConfirmationPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@4bf48f6]" started-at="2026-01-18T19:53:45 MST" name="validateProductOnConfirmationPage" data-provider="getData" finished-at="2026-01-18T19:54:23 MST" duration-ms="38064" status="FAIL">
+        <test-method signature="validateProductOnConfirmationPage_with_JSON(java.util.HashMap)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@6b58b9e9]" started-at="2026-01-19T20:57:52 MST" name="validateProductOnConfirmationPage_with_JSON" data-provider="loginData" finished-at="2026-01-19T20:57:57 MST" duration-ms="4968" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{country=Canada, password=Test1234, prodname=ADIDAS ORIGINAL, username=twinklekhanna@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProductOnConfirmationPage_with_JSON -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@6b58b9e9]" started-at="2026-01-19T20:57:57 MST" name="quitDriver" finished-at="2026-01-19T20:58:07 MST" duration-ms="10237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- naveennarayananacademy.tests.StandAloneTest -->
+    </test> <!-- Error Validation -->
+    <test started-at="2026-01-19T20:58:07 MST" name="Confirmation Page" finished-at="2026-01-19T20:58:53 MST" duration-ms="45134">
+      <class name="naveennarayananacademy.tests.StandAloneTest">
+        <test-method is-config="true" signature="launchApplication(java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" started-at="2026-01-19T20:58:07 MST" name="launchApplication" finished-at="2026-01-19T20:58:16 MST" duration-ms="8735" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method is-config="true" signature="launchApplication(java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" started-at="2026-01-19T20:58:07 MST" name="launchApplication" finished-at="2026-01-19T20:58:16 MST" duration-ms="8444" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method is-config="true" signature="launchApplication(java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" started-at="2026-01-19T20:58:07 MST" name="launchApplication" finished-at="2026-01-19T20:58:18 MST" duration-ms="10187" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method retried="true" signature="validateProductOnConfirmationPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" started-at="2026-01-19T20:58:16 MST" name="validateProductOnConfirmationPage" data-provider="getData" finished-at="2026-01-19T20:58:38 MST" duration-ms="22325" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -103,15 +199,15 @@
           </params>
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //h1[contains(text(),'Thankyou')]' (tried for 10 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='cartSection']' (tried for 10 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //h1[contains(text(),'Thankyou')]' (tried for 10 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='cartSection']' (tried for 10 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 at abstractComponents.Abstract_Components.waitForElement(Abstract_Components.java:26)
-at naveennarayananacademy.pageobjectmodel.ConfirmationPage.validateProductOnFinalPage(ConfirmationPage.java:38)
-at naveennarayananacademy.tests.StandAloneTest.validateProductOnConfirmationPage(StandAloneTest.java:62)
+at naveennarayananacademy.pageobjectmodel.ProductCartPage.navigateToCart(ProductCartPage.java:66)
+at naveennarayananacademy.tests.StandAloneTest.validateProductOnConfirmationPage(StandAloneTest.java:57)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -122,29 +218,20 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@class='cartSection']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: '4.39.0', revision: '126f156aee'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.1', java.version: '21.0.9'
-Driver info: org.openqa.selenium.safari.SafariDriver
-Command: [C8B2698D-536F-4976-AF33-E4FC10D4422B, findElement {using=xpath, value=//h1[contains(text(),'Thankyou')]}]
-Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 26.1, platformName: mac, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:experimentalWebSocketUrl: false, safari:platformBuildVersion: 25B78, safari:platformVersion: 26.1, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}, webkit:alwaysAllowAutoplay: false}
-Session ID: C8B2698D-536F-4976-AF33-E4FC10D4422B
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [c46c4823-cace-4dbc-b2ce-97e2d619b161, findElement {value=//div[@class='cartSection'], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.1, moz:accessibilityChecks: false, moz:buildID: 20260116091309, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 25.1.0, moz:processID: 24851, moz:profile: /var/folders/bh/0xdzph6512b..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Session ID: c46c4823-cace-4dbc-b2ce-97e2d619b161
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -166,38 +253,132 @@ at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedCo
 at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
 at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 29 more
+... 19 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateProductOnConfirmationPage -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@4bf48f6]" started-at="2026-01-18T19:54:26 MST" name="quitDriver" finished-at="2026-01-18T19:54:37 MST" duration-ms="10227" status="PASS">
+        <test-method signature="incorrectLogin()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" started-at="2026-01-19T20:58:16 MST" name="incorrectLogin" finished-at="2026-01-19T20:58:17 MST" duration-ms="693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- incorrectLogin -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" started-at="2026-01-19T20:58:17 MST" name="quitDriver" finished-at="2026-01-19T20:58:18 MST" duration-ms="691" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
-        <test-method is-config="true" signature="launchApplication(java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@4bf48f6]" started-at="2026-01-18T19:54:37 MST" name="launchApplication" finished-at="2026-01-18T19:54:41 MST" duration-ms="4847" status="PASS">
+        <test-method retried="true" signature="validateProductOnConfirmationPage_with_JSON(java.util.HashMap)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" started-at="2026-01-19T20:58:18 MST" name="validateProductOnConfirmationPage_with_JSON" data-provider="loginData" finished-at="2026-01-19T20:58:42 MST" duration-ms="23876" status="SKIP">
           <params>
             <param index="0">
               <value>
-                <![CDATA[safari]]>
+                <![CDATA[{country=Canada, password=Test1234, prodname=ADIDAS ORIGINAL, username=twinklekhanna@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: span[class='ng-star-inserted']' (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: span[class='ng-star-inserted']' (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at abstractComponents.Abstract_Components.waitForElement(Abstract_Components.java:26)
+at naveennarayananacademy.pageobjectmodel.CheckOutPage.selectCountry(CheckOutPage.java:51)
+at naveennarayananacademy.tests.StandAloneTest.validateProductOnConfirmationPage_with_JSON(StandAloneTest.java:95)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: span[class='ng-star-inserted']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.1', java.version: '21.0.9'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a812087b-4e2a-44a9-8902-393bd8e2ad32, findElement {value=span[class='ng-star-inserted'], using=css selector}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.1, moz:accessibilityChecks: false, moz:buildID: 20260116091309, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 25.1.0, moz:processID: 24850, moz:profile: /var/folders/bh/0xdzph6512b..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Session ID: a812087b-4e2a-44a9-8902-393bd8e2ad32
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 19 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProductOnConfirmationPage_with_JSON -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" started-at="2026-01-19T20:58:38 MST" name="quitDriver" finished-at="2026-01-19T20:58:39 MST" duration-ms="446" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="launchApplication(java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" started-at="2026-01-19T20:58:39 MST" name="launchApplication" finished-at="2026-01-19T20:58:44 MST" duration-ms="5397" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="validateProductOnConfirmationPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@4bf48f6]" started-at="2026-01-18T19:54:41 MST" name="validateProductOnConfirmationPage" data-provider="getData" finished-at="2026-01-18T19:54:46 MST" duration-ms="4878" status="PASS">
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" started-at="2026-01-19T20:58:42 MST" name="quitDriver" finished-at="2026-01-19T20:58:42 MST" duration-ms="493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="launchApplication(java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" started-at="2026-01-19T20:58:42 MST" name="launchApplication" finished-at="2026-01-19T20:58:47 MST" duration-ms="5383" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[dimplekapadia@gmail.com]]>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="validateProductOnConfirmationPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" started-at="2026-01-19T20:58:44 MST" name="validateProductOnConfirmationPage" data-provider="getData" finished-at="2026-01-19T20:58:49 MST" duration-ms="4676" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[twinklekhanna@gmail.com]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Test12345]]>
+                <![CDATA[Test1234]]>
               </value>
             </param>
             <param index="2">
@@ -214,11 +395,116 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateProductOnConfirmationPage -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@4bf48f6]" started-at="2026-01-18T19:54:46 MST" name="quitDriver" finished-at="2026-01-18T19:54:57 MST" duration-ms="10227" status="PASS">
+        <test-method signature="validateProductOnConfirmationPage_with_JSON(java.util.HashMap)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" started-at="2026-01-19T20:58:47 MST" name="validateProductOnConfirmationPage_with_JSON" data-provider="loginData" finished-at="2026-01-19T20:58:52 MST" duration-ms="4753" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{country=Canada, password=Test1234, prodname=ADIDAS ORIGINAL, username=twinklekhanna@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProductOnConfirmationPage_with_JSON -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" started-at="2026-01-19T20:58:49 MST" name="quitDriver" finished-at="2026-01-19T20:58:49 MST" duration-ms="456" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@52e7a6b2]" started-at="2026-01-19T20:58:52 MST" name="quitDriver" finished-at="2026-01-19T20:58:53 MST" duration-ms="430" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
       </class> <!-- naveennarayananacademy.tests.StandAloneTest -->
     </test> <!-- Confirmation Page -->
+    <test started-at="2026-01-19T20:58:53 MST" name="E2E_Edge" finished-at="2026-01-19T20:59:03 MST" duration-ms="10035">
+      <class name="naveennarayananacademy.tests.StandAloneTest">
+        <test-method is-config="true" signature="launchApplication(java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@42a15bdc]" started-at="2026-01-19T20:58:53 MST" name="launchApplication" finished-at="2026-01-19T20:58:58 MST" duration-ms="5360" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method is-config="true" signature="launchApplication(java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@42a15bdc]" started-at="2026-01-19T20:58:53 MST" name="launchApplication" finished-at="2026-01-19T20:58:58 MST" duration-ms="5363" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method is-config="true" signature="launchApplication(java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@42a15bdc]" started-at="2026-01-19T20:58:53 MST" name="launchApplication" finished-at="2026-01-19T20:58:56 MST" duration-ms="3122" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="validateProductOnConfirmationPage_with_JSON(java.util.HashMap)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@42a15bdc]" started-at="2026-01-19T20:58:56 MST" name="validateProductOnConfirmationPage_with_JSON" data-provider="loginData" finished-at="2026-01-19T20:59:03 MST" duration-ms="6789" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{country=Canada, password=Test1234, prodname=ADIDAS ORIGINAL, username=twinklekhanna@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProductOnConfirmationPage_with_JSON -->
+        <test-method signature="validateProductOnConfirmationPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@42a15bdc]" started-at="2026-01-19T20:58:58 MST" name="validateProductOnConfirmationPage" data-provider="getData" finished-at="2026-01-19T20:59:03 MST" duration-ms="4582" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[twinklekhanna@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ADIDAS ORIGINAL]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Canada]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProductOnConfirmationPage -->
+        <test-method signature="incorrectLogin()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@42a15bdc]" started-at="2026-01-19T20:58:58 MST" name="incorrectLogin" finished-at="2026-01-19T20:58:59 MST" duration-ms="767" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- incorrectLogin -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@42a15bdc]" started-at="2026-01-19T20:58:59 MST" name="quitDriver" finished-at="2026-01-19T20:58:59 MST" duration-ms="91" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@42a15bdc]" started-at="2026-01-19T20:59:03 MST" name="quitDriver" finished-at="2026-01-19T20:59:03 MST" duration-ms="91" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:naveennarayananacademy.tests.StandAloneTest@42a15bdc]" started-at="2026-01-19T20:59:03 MST" name="quitDriver" finished-at="2026-01-19T20:59:03 MST" duration-ms="92" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- naveennarayananacademy.tests.StandAloneTest -->
+    </test> <!-- E2E_Edge -->
   </suite> <!-- Suite -->
 </testng-results>
