@@ -12,6 +12,5 @@ Scenario Outline: Positive test of order
 
 			
 	Examples:
-	| name 					  | password | productName 	   | countryName |
-	| twinklekhanna@gmail.com | Test1234 | ADIDAS ORIGINAL | Canada 	 |
-
+	| name  | password | productName | countryName |
+	| twinklekhanna@gmail.com | Test1234 | ADIDAS ORIGINAL | Canada |
