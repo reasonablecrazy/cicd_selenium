@@ -10,6 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
+import java.util.UUID;
 
 import org.openqa.selenium.*;
 import org.testng.annotations.Test;
@@ -18,6 +19,7 @@ import naveennarayananacademy.pageobjectmodel.CheckOutPage;
 import naveennarayananacademy.pageobjectmodel.ConfirmationPage;
 import naveennarayananacademy.pageobjectmodel.LandingPage;
 import naveennarayananacademy.pageobjectmodel.ProductCartPage;
+import naveennarayananacademy.pageobjectmodel.RegistrationPage;
 import naveennarayananacademy.testComponents.BaseTests;
 import naveennarayananacademy.testComponents.RetryAnalyzer;
 
@@ -99,5 +101,27 @@ public class StandAloneTest extends BaseTests {
 		
 		System.out.println("Successfully concluded the test");
 	}
+	
+	@DataProvider(name = "registrationData", parallel = false)
+    public Object[][] getRegistrationData() {
+        String randomEmail1 = "twinklekhanna+reg_" + UUID.randomUUID().toString().substring(0, 8) + "@gmail.com";
+        String randomEmail2 = "dimplekapadia+reg_" + UUID.randomUUID().toString().substring(0, 8) + "@gmail.com";
+        return new Object[][] {
+            {"Twinkle", "Khanna", randomEmail1, "9876543210", "Doctor", "Female", "Test@1234", "Test@1234"},
+            {"Dimple", "Kapadia", randomEmail2, "9123456780", "Engineer", "Male", "Test@5678", "Test@5678"}
+        };
+    }
+
+    @Test(groups="Registration", dataProvider = "registrationData", retryAnalyzer = RetryAnalyzer.class)
+    public void completeRegistration(String firstName, String lastName, String email, String phone, String occupation, String gender, String password, String confirmPassword) {
+        RegistrationPage regPage = new RegistrationPage(getDriver());
+        regPage.fillRegistrationForm(firstName, lastName, email, phone, occupation, gender, password, confirmPassword)
+                .checkAgeConfirmation();
+        regPage.clickRegister();
+        // Assert registration success message or toast
+        boolean isSuccess = regPage.isAccountCreatedSuccessMessageDisplayed();
+        org.testng.Assert.assertTrue(isSuccess,
+                "Registration was not successful. Success message or toast not found.");
+    }
 
 }

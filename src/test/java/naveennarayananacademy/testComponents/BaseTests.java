@@ -30,6 +30,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -192,9 +193,9 @@ public class BaseTests {
 		prop.load(file);
 	}
 
-	@Parameters("browser")
+	@Parameters({"browser"})
 	@BeforeMethod (alwaysRun=true)
-	public static void launchApplication(String browserName) throws IOException {
+	public static void launchApplication(@Optional("chrome") String browserName) throws IOException {
 		initializeDriver(browserName);
 		LandingPage lp = new LandingPage(getDriver());
 		lp.loadThePage();
@@ -202,8 +203,10 @@ public class BaseTests {
 	
 	@AfterMethod (alwaysRun=true)
 	public void quitDriver() {
-		getDriver().quit();
-		driver.remove();
+		if (getDriver() != null) {
+            getDriver().quit();
+            driver.remove();
+        }
 	}
 	
 	public List<HashMap<String,String>> extractDataFromJSON(Path path) throws IOException {
