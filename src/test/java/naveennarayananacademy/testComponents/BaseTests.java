@@ -53,6 +53,9 @@ public class BaseTests {
 		
 		loadThePropertiesFile();
 		ChromeOptions options = getChromeOptions();
+		options.addArguments("--headless=new");
+		options.addArguments("--disable-gpu");
+		options.addArguments("--window-size=1920,1080");
 		String browserName = getBrowserDetails(browserNameFromTest);
 		String osName = getOSDetails();
 		String modeOfExecution = getModeOfExecution();
