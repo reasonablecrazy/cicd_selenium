@@ -55,7 +55,7 @@ stages:
     - task: CopyFiles@2
       displayName: Copy Build Artifact
       inputs:
-        Contents: 'target/*.war'
+        Contents: 'target/*.jar'
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
     # Publish artifact
@@ -97,4 +97,4 @@ stages:
               azureSubscription: 'AzureServiceConnection'
               appType: 'webAppLinux'
               appName: 'nsquare-gadngvdfgqdndybs'
-              package: '$(Pipeline.Workspace)/$(buildArtifactName)/**/*.war'
+              package: '$(Pipeline.Workspace)/$(buildArtifactName)/**/*.jar'
