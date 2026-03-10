@@ -36,8 +36,11 @@ public class LandingPage extends Abstract_Components {
 		waitForElement(userPassword).sendKeys(password);
 		((JavascriptExecutor) driver)
 	    .executeScript("arguments[0].scrollIntoView(true);", loginButton);
+		
+		((JavascriptExecutor) driver)
+	    .executeScript("arguments[0].click();", loginButton);
 
-		waitForElement(loginButton).click();
+		//waitForElement(loginButton).click();
 	}
 	
 	public LandingPage loadThePage() {
