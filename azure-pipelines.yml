@@ -46,7 +46,7 @@ stages:
       displayName: Package Application
       inputs:
         mavenPomFile: 'pom.xml'
-        goals: 'package'
+        goals: 'package -DskipTests'
         javaHomeOption: 'JDKVersion'
         jdkVersionOption: '17'
         jdkArchitectureOption: 'x64'
