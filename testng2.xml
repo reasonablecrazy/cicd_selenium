@@ -9,7 +9,7 @@
     <classes>
       <class name="naveennarayananacademy.tests.StandAloneTest">
       <methods>
-      	<include name="validateProductOnConfirmationPage_with_JSON"></include>
+      	<include name="validateProductOnConfirmationPage_with_JSON_Regression"></include>
       	<exclude name="validateProductOnConfirmationPage"></exclude>
       </methods></class>
     </classes>

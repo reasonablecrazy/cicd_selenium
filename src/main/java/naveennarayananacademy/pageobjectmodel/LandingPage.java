@@ -1,5 +1,6 @@
 package naveennarayananacademy.pageobjectmodel;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -33,6 +34,9 @@ public class LandingPage extends Abstract_Components {
 	public void login(String email, String password) {
 		waitForElement(userMail).sendKeys(email);
 		waitForElement(userPassword).sendKeys(password);
+		((JavascriptExecutor) driver)
+	    .executeScript("arguments[0].scrollIntoView(true);", loginButton);
+
 		waitForElement(loginButton).click();
 	}
 	

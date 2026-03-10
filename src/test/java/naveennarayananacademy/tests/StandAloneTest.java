@@ -102,6 +102,12 @@ public class StandAloneTest extends BaseTests {
 		System.out.println("Successfully concluded the test");
 	}
 	
+	@Test(groups="E2E", dataProvider = "loginData", retryAnalyzer = RetryAnalyzer.class)
+	public void validateProductOnConfirmationPage_with_JSON_Regression(HashMap <String,String> data) {
+		LandingPage lp = new LandingPage(getDriver());
+		lp.login(data.get("username"), data.get("password"));
+	}
+	
 	@DataProvider(name = "registrationData", parallel = false)
     public Object[][] getRegistrationData() {
         String randomEmail1 = "twinklekhanna+reg_" + UUID.randomUUID().toString().substring(0, 8) + "@gmail.com";
